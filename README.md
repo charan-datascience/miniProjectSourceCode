@@ -8,6 +8,22 @@ This mini project focuses on understanding, modifying, and extending a **Transac
 
 ---
 
+## Features Implemented
+- Create new account records with account number, last name, first name, and opening balance
+- Update account balances with charges or payments
+- Delete existing accounts with confirmation prompt
+- Export active accounts into a formatted `accounts.txt`
+- Search active accounts by first or last name (case-insensitive)
+- Sort and display all active accounts by:
+  - account number
+  - last name
+  - balance high-to-low
+  - balance low-to-high
+- View transaction history from `transactions.log`
+- Automatic logging for account open, close, charge, and payment events
+
+---
+
 ## Reference Code
 Review the given source code before starting the project:
 
@@ -88,10 +104,53 @@ Review the given source code before starting the project:
 
 ## Additional Reference
 🔗 http://j.mp/transactionUnit5  
-🔗 https://htmlpreview.github.io/?https://github.com/kgisl/makesite/blob/master/content/blog/2021-06-23-unit5-mini-project.md.html
+🔗 https://htmlpreview.github.io/?https://github.com/kgisl/makesite/blob/master/content/blog/2021-06-23-unit5-mini-project.md.html  
 🔗 https://github.com/24UCS271-MiniProject/miniProjectSourceCode/
 
 ---
 
-**Date:** 31/01/2026  
-**Time:** 06:42
+**Date:** 21/05/2026  
+**Version:** Credit Manager v2.0
+1. Open a terminal in the project folder.
+2. Compile using a C compiler, for example:
+   ```powershell
+   gcc trans.c -o trans.exe
+   ```
+3. Run the program:
+   ```powershell
+   .\trans.exe
+   ```
+4. Use the menu to select operations.
+
+---
+
+## Usage Notes
+- The program creates `credit.dat` automatically if it does not exist.
+- `accounts.txt` is generated when choosing the export option.
+- `transactions.log` is updated automatically for each account operation.
+- Accounts are stored in fixed slots from 1 to 100.
+
+---
+
+## New/Enhanced Functionalities
+- `Search accounts by name` allows quick lookup using partial or full first/last names.
+- `Sort & display all accounts` shows active accounts sorted using the selected criterion.
+- `View transaction history log` provides a chronological audit trail of account operations.
+
+---
+
+## Notes for Testing
+- Add new accounts and verify they appear in `accounts.txt` after export.
+- Perform balance updates and confirm `transactions.log` entries.
+- Search for accounts using different case combinations to validate case-insensitive matching.
+- Sort accounts and confirm totals/averages displayed are correct.
+
+---
+
+## References
+- Original reference code: https://replit.com/@ashokb/Unit5Programs#trans.c
+
+---
+
+**Date:** 21/05/2026
+**Version:** Credit Manager v2.0
